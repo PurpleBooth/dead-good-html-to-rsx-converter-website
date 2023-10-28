@@ -8,7 +8,8 @@ use dioxus::html::textarea;
 use dioxus::prelude::*;
 use dioxus_fullstack::prelude::*;
 use dioxus_router::prelude::*;
-use log::{LevelFilter, warn};
+use log::{warn, LevelFilter};
+use serde::{Deserialize, Serialize};
 
 fn main() {
     // Init debug
@@ -16,34 +17,31 @@ fn main() {
 
     let config = LaunchBuilder::<FullstackRouterConfig<Route>>::router();
     #[cfg(feature = "ssr")]
-        let config = config.incremental(
+    let config = config.incremental(
         IncrementalRendererConfig::default().invalidate_after(std::time::Duration::from_secs(120)),
     );
 
     config.launch();
 }
 
-#[derive(Clone, Routable, Debug, PartialEq, serde::Serialize, serde::Deserialize)]
+#[derive(Clone, Routable, Debug, PartialEq, Eq, Serialize, Deserialize)]
 enum Route {
     #[route("/")]
-    Home {}
+    Home {},
 }
 
 #[inline_props]
 fn Home(cx: Scope) -> Element {
-    let parsed_text = use_state(cx, || "".to_string());
+    let parsed_text = use_state(cx, String::new);
 
     let text_parser = use_coroutine(cx, |mut rx| {
         to_owned![parsed_text];
         async move {
             loop {
-                match rx.next().await {
-                    Some(text) => {
-                        if let Ok(result) = convert(text) {
-                            parsed_text.set(result);
-                        }
+                if let Some(text) = rx.next().await {
+                    if let Ok(result) = convert(text) {
+                        parsed_text.set(result);
                     }
-                    None => {}
                 }
             }
         }

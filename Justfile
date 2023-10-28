@@ -4,7 +4,7 @@ show-help:
 
 # Test it was built ok
 test:
-  RUST_BACKTRACE=1 cargo test
+  RUST_BACKTRACE=1 cargo test --features ssr
 
 # Build release version
 build:
@@ -24,16 +24,16 @@ bench:
 
 # Lint it
 lint:
-  cargo +nightly fmt --all -- --check
-  cargo +nightly clippy --all-features -- -D warnings -Dclippy::all -D clippy::pedantic -D clippy::cargo
-  cargo +nightly check
-  cargo +nightly audit
+  cargo fmt --all -- --check
+  cargo clippy -- -D warnings -Dclippy::all -D clippy::pedantic -D clippy::cargo
+  cargo check
+  cargo audit
 
 # Format what can be formatted
 fmt:
-  cargo +nightly fix --allow-dirty --allow-staged
-  cargo +nightly clippy --allow-dirty --allow-staged --fix -Z unstable-options --all-features -- -D warnings -Dclippy::all -D clippy::pedantic -D clippy::cargo -D clippy::nursery
-  cargo +nightly fmt --all
+  cargo fix --allow-dirty --allow-staged
+  cargo clippy --allow-dirty --allow-staged --fix -- -D warnings -Dclippy::all -D clippy::pedantic -D clippy::cargo -D clippy::nursery
+  cargo fmt --all
   npx prettier --write **.yml
 
 # Clean the build directory

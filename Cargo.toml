@@ -1,8 +1,14 @@
 [package]
 name = "dead-good-html-to-rsx-converter-web"
 version = "0.1.0"
-authors = ["name <email@example.com>"]
+authors = ["Billie Thompson <billie@billiecodes.com>"]
 edition = "2021"
+license = "Unlicense"
+repository = "https://github.com/PurpleBooth/dead-good-html-to-rsx-converter-web"
+keywords = ["html", "rsx", "rust", "web"]
+description = "A web interface for the dead-good-html-to-rsx-converter"
+readme = "README.md"
+categories = ["development-tools"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -12,12 +18,12 @@ dead-good-html-to-rsx-converter = "0.1.1"
 dioxus-fullstack = { version = "0.4", features = ["router"] }
 
 dioxus = { version = "0.4" }
-serde = { version = "1.0.159", features = ["derive"] }
+serde = { version = "1.0.190", features = ["derive"] }
 
 dioxus-router = { version = "0.4" }
 
 # Debug
-log = "0.4.19"
+log = "0.4.20"
 dioxus-logger = "0.4.1"
 futures-util = "0.3.29"
 
