@@ -16,7 +16,7 @@ asset_dir = "public"
 [web.app]
 
 # HTML title tag content
-title = "dioxus | ⛺"
+title = "Dead Good Html To Rsx Converter"
 
 [web.watcher]
 
