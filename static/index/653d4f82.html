@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>dioxus | ⛺</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="tailwind.css">
+
+</head>
+<body>
+  <div id="main"><nav class="shadow-sm p-8 w-full bg-neutral-50 dark:bg-neutral-900 dark:text-white"><h1>Dead good HTML to RSX Converter</h1></nav><div class="flex flex-col md:flex-row w-full items-stretch justify-stretch h-full p-4 gap-4"><textarea class="resize-none px-0 w-full h-[85vh] text-sm text-neutral-900 bg-white border-0 dark:bg-neutral-800 focus:ring-0 dark:text-white dark:placeholder-neutral-400" placeholder="Paste HTML here" required=true></textarea><textarea class="resize-none px-0 w-full h-[85vh] text-sm text-neutral-900 bg-white border-0 dark:bg-neutral-800 focus:ring-0 dark:text-white dark:placeholder-neutral-400" placeholder="RSX will appear here" required=true value=""></textarea></div><meta hidden="true" id="dioxus-storage-props" data-serialized="AQ==" /><meta hidden="true" id="dioxus-storage-data" data-serialized="AA==" /></div>
+  <script type="module">
+    import init from "/./assets/dioxus/dead-good-html-to-rsx-converter-wev.js";
+    init("/./assets/dioxus/dead-good-html-to-rsx-converter-wev_bg.wasm").then(wasm => {
+      if (wasm.__wbindgen_start == undefined) {
+        wasm.main();
+      }
+    });
+  </script>
+  
+</body>
+</html>
