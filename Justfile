@@ -1,26 +1,20 @@
 # This help screen
 show-help:
-        just --list
+  just --list
 
 # Test it was built ok
 test:
-  RUST_BACKTRACE=1 cargo test --features ssr
+  RUST_BACKTRACE=1 cargo test
 
 # Build release version
 build:
-  npx tailwindcss -i ./input.css -o ./public/tailwind.css --minify
-  dx build --features web --release
-  cargo build --features ssr --release
+  npx tailwindcss -i ./input.css -o ./public/tailwind.css  --minify
+  dx build --profile release
+  cargo build --profile release
 
-dev:
-  npx tailwindcss -i ./input.css -o ./public/tailwind.css
-  dx build --features web
-  cargo run --features ssr
-
-
-# Check performance
-bench:
-  cargo bench
+# Run the dev server
+dev: build
+  cargo shuttle run
 
 # Lint it
 lint:
