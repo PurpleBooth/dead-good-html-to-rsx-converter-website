@@ -16,7 +16,6 @@ name = "dead-good-html-to-rsx-converter-web"
 path = "src/bin/dead-good-html-to-rsx-converter-web.rs"
 
 [dependencies]
-dead-good-html-to-rsx-converter = "0.3.0"
 dioxus = { version = "0.4" }
 serde = { version = "1.0.190", features = ["derive"] }
 
@@ -24,6 +23,9 @@ serde = { version = "1.0.190", features = ["derive"] }
 log = "0.4.20"
 dioxus-logger = "0.4.1"
 futures-util = "0.3.29"
+rsx-rosetta = { version = "0.4.0" }
+html_parser = "0.7.0"
+dioxus-autofmt = "0.4.0"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 # Shuttle
