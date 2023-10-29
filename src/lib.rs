@@ -2,6 +2,7 @@
 #![allow(unused)]
 
 use futures_util::stream::StreamExt;
+use std::panic;
 
 use dioxus::html::textarea;
 use dioxus::prelude::*;
@@ -28,13 +29,24 @@ fn Home(cx: Scope) -> Element {
             loop {
                 if let Some(text) = rx.next().await {
                     let text: String = text;
+                    if text.is_empty() {
+                        // Shortcut if the text is empty
+                        parsed_text.set(text);
+                        continue;
+                    }
+
                     let Ok(dom) = Dom::parse(text.trim()) else {
                         continue;
                     };
 
                     let body = rsx_rosetta::rsx_from_html(&dom);
 
-                    if let Some(result) = write_block_out(body) {
+                    let result = panic::catch_unwind(|| {
+                        // This code has a lot of unwinds in it, so we need to catch them
+                        write_block_out(body).expect("failed to write block out")
+                    });
+
+                    if let Ok(result) = result {
                         parsed_text.set(result);
                     }
                 }
