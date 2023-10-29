@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v0.3.0 - 2023-10-29
+#### Features
+- Use the same parser as the cli - (9aaf636) - Billie Thompson
+#### Refactoring
+- Clippy advice - (3eb65d9) - Billie Thompson
+
+- - -
+
 ## v0.2.4 - 2023-10-29
 #### Bug Fixes
 - Make the fox stay at the bottom better - (da1f39c) - Billie Thompson
