@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v0.2.4 - 2023-10-29
+#### Bug Fixes
+- Make the fox stay at the bottom better - (da1f39c) - Billie Thompson
+
+- - -
+
 ## v0.2.3 - 2023-10-29
 #### Bug Fixes
 - update dead-good-html-to-rsx-converter requirement - (f91d75c) - dependabot[bot]
