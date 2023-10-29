@@ -5,12 +5,12 @@ use futures_util::stream::StreamExt;
 
 use dioxus::html::textarea;
 use dioxus::prelude::*;
+use dioxus_autofmt::write_block_out;
 use dioxus_fullstack::prelude::*;
 use dioxus_router::prelude::*;
+use html_parser::Dom;
 use log::{warn, LevelFilter};
 use serde::{Deserialize, Serialize};
-use html_parser::Dom;
-use dioxus_autofmt::write_block_out;
 
 #[derive(Clone, Routable, Debug, PartialEq, Eq, Serialize, Deserialize)]
 pub enum AppRoutes {
@@ -28,13 +28,8 @@ fn Home(cx: Scope) -> Element {
             loop {
                 if let Some(text) = rx.next().await {
                     let text: String = text;
-                    let dom = match Dom::parse(text.trim()) {
-                        Ok(dom) => {
-                            dom
-                        }
-                        Err(_) => {
-                           continue;
-                        }
+                    let Ok(dom) = Dom::parse(text.trim()) else {
+                        continue;
                     };
 
                     let body = rsx_rosetta::rsx_from_html(&dom);
