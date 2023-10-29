@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
       - run: rustup target add wasm32-unknown-unknown
       - name: Install cargo-binstall
         uses: cargo-bins/cargo-binstall@v1.4.4
@@ -38,7 +38,7 @@ jobs:
       - uses: extractions/setup-just@v1
       - name: Get tags
         run: git fetch --tags origin
-      - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
       - run: rustup target add wasm32-unknown-unknown
       - name: Install cargo-binstall
         uses: cargo-bins/cargo-binstall@v1.4.4
