@@ -36,14 +36,14 @@ fn Home(cx: Scope) -> Element {
 
     cx.render(rsx! {
         nav {
-            class: "font-family-mono p-4 w-full bg-neutral-50 dark:bg-neutral-900 dark:text-white",
+            class: "font-mono p-4 w-full bg-neutral-50 dark:bg-neutral-900 dark:text-white",
             h1 {
-                class: "font-family-mono text-xl",
+                class: "font-mono text-xl",
                 "Dead good HTML to RSX converter"
             }
         }
         div {
-            class: "font-family-mono flex flex-col md:flex-row w-full items-stretch justify-stretch h-full p-4 gap-4",
+            class: "font-mono flex flex-col md:flex-row w-full items-stretch justify-stretch h-full p-4 gap-4",
             textarea {
                 class: "resize-none p-4 w-full h-[85vh] text-sm text-neutral-900 bg-neutral-100 border-0 dark:bg-neutral-800 focus:ring-0 dark:text-white dark:placeholder-neutral-400",
                 placeholder: "Paste HTML here",
@@ -52,7 +52,7 @@ fn Home(cx: Scope) -> Element {
                 oninput: move |evt| text_parser.send(evt.value.clone()),
             }
             textarea {
-                class: "font-family-mono resize-none p-4 w-full h-[85vh] text-sm text-neutral-900 bg-neutral-100 border-0 dark:bg-neutral-800 focus:ring-0 dark:text-white dark:placeholder-neutral-400",
+                class: "font-mono resize-none p-4 w-full h-[85vh] text-sm text-neutral-900 bg-neutral-100 border-0 dark:bg-neutral-800 focus:ring-0 dark:text-white dark:placeholder-neutral-400",
                 placeholder: "RSX will appear here",
                 aria_label: "RSX will appear here",
                 required: true,
@@ -60,7 +60,7 @@ fn Home(cx: Scope) -> Element {
             }
         }
         div {
-            class: "text-center font-family-mono p-4 w-full",
+            class: "text-center font-mono p-4 w-full",
             "🦊"
         }
     })
