@@ -16,6 +16,10 @@ build:
 dev: build
   cargo shuttle run
 
+# Deploy the server
+deploy: build
+  cargo shuttle deploy
+
 # Lint it
 lint:
   cargo fmt --all -- --check
