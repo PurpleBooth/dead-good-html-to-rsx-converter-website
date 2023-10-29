@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v0.2.1 - 2023-10-29
+#### Bug Fixes
+- Correct the font used - (f867640) - Billie Thompson
+#### Continuous Integration
+- Add mergify config - (9417ab4) - Billie Thompson
+
+- - -
+
 ## v0.2.0 - 2023-10-29
 #### Continuous Integration
 - Add api key - (2262327) - Billie Thompson
