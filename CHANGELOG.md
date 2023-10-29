@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v0.2.0 - 2023-10-29
+#### Continuous Integration
+- Add api key - (2262327) - Billie Thompson
+#### Features
+- Put a cute little fox on the page - (5de61bd) - Billie Thompson
+
+- - -
+
 ## v0.1.0 - 2023-10-29
 #### Bug Fixes
 - Linting - (2504470) - Billie Thompson
