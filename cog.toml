@@ -9,6 +9,7 @@ pre_bump_hooks = [
 post_bump_hooks = [
     "git push",
     "git push origin v{{version}}",
+    "just deploy"
 ]
 pre_package_bump_hooks = []
 post_package_bump_hooks = []
