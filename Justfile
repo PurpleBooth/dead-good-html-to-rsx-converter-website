@@ -18,7 +18,7 @@ dev: build
 
 # Deploy the server
 deploy: build
-  cargo shuttle deploy
+  cargo shuttle deploy --allow-dirty
 
 # Lint it
 lint:

@@ -46,6 +46,14 @@ jobs:
         run: cargo binstall --no-confirm cargo-edit
       - shell: bash
         run: cargo binstall --no-confirm cocogitto
+      - shell: bash
+        run: cargo binstall --no-confirm dioxus-cli
+      - shell: bash
+        run: cargo binstall --no-confirm cargo-shuttle
+      - shell: bash
+        env:
+          SHUTTLE_API_KEY: ${{ secrets.SHUTTLE_API_KEY }}
+        run: cargo shuttle login --api-key "$SHUTTLE_API_KEY"
       - id: previous_version
         run: |
           cog get-version | tee .version
@@ -54,8 +62,6 @@ jobs:
         shell: bash
       - name: Semver release
         id: release
-        env:
-          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_TOKEN }}
         run: |
           git config --global user.name "cog-bot"
           git config --global user.email "cog@example.com"
