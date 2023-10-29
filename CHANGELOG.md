@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v0.3.1 - 2023-10-29
+#### Bug Fixes
+- Fix panics from new formatter - (ad4f489) - Billie Thompson
+
+- - -
+
 ## v0.3.0 - 2023-10-29
 #### Features
 - Use the same parser as the cli - (9aaf636) - Billie Thompson
