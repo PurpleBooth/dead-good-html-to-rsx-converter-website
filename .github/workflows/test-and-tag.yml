@@ -15,8 +15,8 @@ jobs:
       - run: rustup target add wasm32-unknown-unknown
       - name: Install cargo-binstall
         uses: cargo-bins/cargo-binstall@v1.4.4
-      - run: cargo binstall dioxus-cli
-      - run: cargo binstall cargo-shuttle
+      - run: cargo binstall --no-confirm dioxus-cli
+      - run: cargo binstall --no-confirm cargo-shuttle
       - uses: extractions/setup-just@v1
       - run: just lint
       - run: just test
