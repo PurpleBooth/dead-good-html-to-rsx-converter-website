@@ -48,14 +48,20 @@ fn Home(cx: Scope) -> Element {
                 class: "resize-none p-4 w-full h-[85vh] text-sm text-neutral-900 bg-neutral-100 border-0 dark:bg-neutral-800 focus:ring-0 dark:text-white dark:placeholder-neutral-400",
                 placeholder: "Paste HTML here",
                 required: true,
+                aria_label: "Paste HTML here",
                 oninput: move |evt| text_parser.send(evt.value.clone()),
             }
             textarea {
                 class: "font-family-mono resize-none p-4 w-full h-[85vh] text-sm text-neutral-900 bg-neutral-100 border-0 dark:bg-neutral-800 focus:ring-0 dark:text-white dark:placeholder-neutral-400",
                 placeholder: "RSX will appear here",
+                aria_label: "RSX will appear here",
                 required: true,
                 value: "{parsed_text}",
             }
+        }
+        div {
+            class: "text-center font-family-mono p-4 w-full",
+            "🦊"
         }
     })
 }
