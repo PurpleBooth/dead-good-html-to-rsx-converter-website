@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v0.2.2 - 2023-10-29
+#### Bug Fixes
+- Make the page small enough not to trigger scroll bar - (c68abf5) - Billie Thompson
+
+- - -
+
 ## v0.2.1 - 2023-10-29
 #### Bug Fixes
 - Correct the font used - (f867640) - Billie Thompson
