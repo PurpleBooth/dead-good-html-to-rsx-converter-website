@@ -13,6 +13,7 @@ use dioxus_fullstack::router::FullstackRouterConfig;
 
 #[cfg(target_arch = "wasm32")]
 fn main() {
+    dioxus_logger::init(LevelFilter::Info).expect("failed to initialize logger");
     let config = LaunchBuilder::<FullstackRouterConfig<AppRoutes>>::router();
     config.launch();
 }
@@ -33,11 +34,16 @@ async fn loader() -> ShuttleAxum {
     use dioxus_fullstack::prelude::*;
     use shuttle_axum::AxumService;
     use shuttle_runtime::ResourceBuilder;
+    use tower_http::trace::TraceLayer;
+    use tower_http::{compression::CompressionLayer, BoxError};
 
     use shuttle_runtime::Context;
-    let router = Router::new().serve_dioxus_application(
-        "",
-        ServeConfigBuilder::new_with_router(FullstackRouterConfig::<AppRoutes>::default()),
-    );
+    let router = Router::new()
+        .serve_dioxus_application(
+            "",
+            ServeConfigBuilder::new_with_router(FullstackRouterConfig::<AppRoutes>::default()),
+        )
+        .layer(TraceLayer::new_for_http())
+        .layer(CompressionLayer::new());
     Ok(AxumService::from(router))
 }
