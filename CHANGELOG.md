@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v0.4.1 - 2023-11-03
+#### Bug Fixes
+- update shuttle-secrets requirement from 0.30.1 to 0.31.0 - (21cadc4) - dependabot[bot]
+#### Documentation
+- Create LICENSE - (de5eafb) - Billie Thompson
+- Create CODE_OF_CONDUCT.md - (564be7b) - Billie Thompson
+
+- - -
+
 ## v0.4.0 - 2023-10-30
 #### Bug Fixes
 - Add instructions for crawlers and a name to the manifest - (d59c272) - Billie Thompson
