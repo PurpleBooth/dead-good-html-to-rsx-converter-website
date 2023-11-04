@@ -37,7 +37,6 @@ async fn loader() -> ShuttleAxum {
     use tower_http::trace::TraceLayer;
     use tower_http::{compression::CompressionLayer, BoxError};
 
-    use shuttle_runtime::Context;
     let router = Router::new()
         .serve_dioxus_application(
             "",
