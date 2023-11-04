@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v0.4.2 - 2023-11-04
+#### Bug Fixes
+- Support latest shuttle sdk - (9d56132) - Billie Thompson
+
+- - -
+
 ## v0.4.1 - 2023-11-03
 #### Bug Fixes
 - update shuttle-secrets requirement from 0.30.1 to 0.31.0 - (21cadc4) - dependabot[bot]
