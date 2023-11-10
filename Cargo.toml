@@ -33,7 +33,7 @@ tower-http = { version = "0.4.4", features = ["tracing", "compression-br", "comp
 miette = { version = "5.10.0" }
 shuttle-runtime = { version = "0.31.0", features = ["next", "tracing-subscriber"] }
 shuttle-axum = { version = "0.31.0" }
-shuttle-secrets = { version = "0.31.0" }
+shuttle-secrets = { version = "0.32.0" }
 tokio = { version = "1.33.0", features = ["full"] }
 axum = { version = "0.6.20" }
 dioxus-fullstack = { version = "0.4", features = ["ssr", "axum", "router"] }
