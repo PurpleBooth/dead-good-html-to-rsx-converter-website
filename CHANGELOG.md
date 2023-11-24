@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v0.4.5 - 2023-11-24
+#### Bug Fixes
+- update shuttle-secrets requirement from 0.33.0 to 0.34.0 - (37dc8c6) - dependabot[bot]
+#### Continuous Integration
+- bump cargo-bins/cargo-binstall from 1.4.5 to 1.4.6 - (c0a7aa8) - dependabot[bot]
+
+- - -
+
 ## v0.4.4 - 2023-11-17
 #### Bug Fixes
 - update shuttle-secrets requirement from 0.32.0 to 0.33.0 - (35dcaf8) - dependabot[bot]
