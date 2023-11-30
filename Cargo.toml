@@ -31,7 +31,7 @@ dioxus-autofmt = "0.4.0"
 tower-http = { version = "0.4.4", features = ["tracing", "compression-br", "compression-deflate", "compression-gzip", "compression-zstd"] }
 # Shuttle
 miette = { version = "5.10.0" }
-shuttle-runtime = { version = "0.31.0", features = ["next", "tracing-subscriber"] }
+shuttle-runtime = { version = "0.34.1", features = ["next", "tracing-subscriber"] }
 shuttle-axum = { version = "0.31.0" }
 shuttle-secrets = { version = "0.34.0" }
 tokio = { version = "1.33.0", features = ["full"] }
