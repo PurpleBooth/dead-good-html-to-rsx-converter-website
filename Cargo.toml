@@ -30,7 +30,7 @@ dioxus-autofmt = "0.4.0"
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 tower-http = { version = "0.4.4", features = ["tracing", "compression-br", "compression-deflate", "compression-gzip", "compression-zstd"] }
 # Shuttle
-miette = { version = "5.10.0" }
+miette = { version = "7.0.0" }
 shuttle-runtime = { version = "0.31.0", features = ["next", "tracing-subscriber"] }
 shuttle-axum = { version = "0.31.0" }
 shuttle-secrets = { version = "0.34.0" }
