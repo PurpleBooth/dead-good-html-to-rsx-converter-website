@@ -14,7 +14,7 @@ jobs:
       - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
       - run: rustup target add wasm32-unknown-unknown
       - name: Install cargo-binstall
-        uses: cargo-bins/cargo-binstall@v1.4.6
+        uses: cargo-bins/cargo-binstall@v1.6.2
       - run: cargo binstall --no-confirm dioxus-cli
       - run: cargo binstall --no-confirm cargo-shuttle
       - uses: extractions/setup-just@v1
@@ -41,7 +41,7 @@ jobs:
       - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
       - run: rustup target add wasm32-unknown-unknown
       - name: Install cargo-binstall
-        uses: cargo-bins/cargo-binstall@v1.4.6
+        uses: cargo-bins/cargo-binstall@v1.6.2
       - shell: bash
         run: cargo binstall --no-confirm cargo-edit
       - shell: bash
