@@ -37,7 +37,7 @@ shuttle-secrets = { version = "0.34.0" }
 tokio = { version = "1.33.0", features = ["full"] }
 axum = { version = "0.6.20" }
 dioxus-fullstack = { version = "0.4", features = ["ssr", "axum", "router"] }
-dioxus-router = { version = "0.4", features = ["ssr"] }
+dioxus-router = { version = "0.7", features = ["ssr"] }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 dioxus-router = { version = "0.4", features = ["web"] }
