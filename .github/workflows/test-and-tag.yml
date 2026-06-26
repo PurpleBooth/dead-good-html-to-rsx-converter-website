@@ -17,7 +17,7 @@ jobs:
         uses: cargo-bins/cargo-binstall@v1.4.6
       - run: cargo binstall --no-confirm dioxus-cli
       - run: cargo binstall --no-confirm cargo-shuttle
-      - uses: extractions/setup-just@v1
+      - uses: extractions/setup-just@v4
       - run: just lint
       - run: just test
   release:
@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@main
         with:
           fetch-depth: 0
-      - uses: extractions/setup-just@v1
+      - uses: extractions/setup-just@v4
       - name: Get tags
         run: git fetch --tags origin
       - run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
