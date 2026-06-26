@@ -16,7 +16,7 @@ name = "dead-good-html-to-rsx-converter-web"
 path = "src/bin/dead-good-html-to-rsx-converter-web.rs"
 
 [dependencies]
-dioxus = { version = "0.4" }
+dioxus = { version = "0.7" }
 serde = { version = "1.0.190", features = ["derive"] }
 
 # Debug
