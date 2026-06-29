@@ -23,7 +23,7 @@ serde = { version = "1.0.190", features = ["derive"] }
 log = "0.4.20"
 dioxus-logger = "0.7.9"
 futures-util = "0.3.29"
-rsx-rosetta = { version = "0.4.0" }
+rsx-rosetta = { version = "0.5.6" }
 html_parser = "0.7.0"
 dioxus-autofmt = "0.7.9"
 
